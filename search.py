@@ -7,6 +7,7 @@ def search(list, number):
             return True
     return False
 
+
 assert search([8], 8) == True
 assert search([1, 5], 5) == True
 assert search([], 1) == False

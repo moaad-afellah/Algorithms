@@ -5,7 +5,7 @@ p = [1, 2, -45]
 vide = []
 one = [14]
 
-tab = [-4,-8,-1]
+tab = [-4, -8, -1]
 
 assert maxElementList_moaad(p) == 2
 assert maxElementList_moaad(n) == 458
