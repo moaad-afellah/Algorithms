@@ -1,4 +1,4 @@
-def isThereDuplicate(listOfNumber):
+def isThereElmentDuplicate(listOfNumber):
     num = 0
 
     while num < len(listOfNumber):
@@ -9,7 +9,7 @@ def isThereDuplicate(listOfNumber):
     return False
 
 
-def isThereDuplicateByDict(listOfNumber):
+def isThereElementDuplicateByDict(listOfNumber):
     dict = {}
     for i in listOfNumber:
         if dict.get(i) is None:
@@ -20,16 +20,16 @@ def isThereDuplicateByDict(listOfNumber):
     return False
 
 
-assert isThereDuplicate([1, 2, 12, 2]) == True
-assert isThereDuplicate([1, 2, 12]) == False
-assert isThereDuplicate([445455, 15, 75, 455, 45445, 445455]) == True
-assert isThereDuplicate([0, 0]) == True
-assert isThereDuplicate([]) == False
-assert isThereDuplicate([i for i in range(100)]) == False
+assert isThereElmentDuplicate([1, 2, 12, 2]) == True
+assert isThereElmentDuplicate([1, 2, 12]) == False
+assert isThereElmentDuplicate([445455, 15, 75, 455, 45445, 445455]) == True
+assert isThereElmentDuplicate([0, 0]) == True
+assert isThereElmentDuplicate([]) == False
+assert isThereElmentDuplicate([i for i in range(100)]) == False
 
-assert isThereDuplicateByDict([1, 2, 12, 2]) == True
-assert isThereDuplicateByDict([1, 2, 12]) == False
-assert isThereDuplicateByDict([445455, 15, 75, 455, 45445, 445455]) == True
-assert isThereDuplicateByDict([0, 0]) == True
-assert isThereDuplicateByDict([]) == False
-assert isThereDuplicateByDict([i for i in range(10000000)]) == False
+assert isThereElementDuplicateByDict([1, 2, 12, 2]) == True
+assert isThereElementDuplicateByDict([1, 2, 12]) == False
+assert isThereElementDuplicateByDict([445455, 15, 75, 455, 45445, 445455]) == True
+assert isThereElementDuplicateByDict([0, 0]) == True
+assert isThereElementDuplicateByDict([]) == False
+assert isThereElementDuplicateByDict([i for i in range(1000000)]) == False

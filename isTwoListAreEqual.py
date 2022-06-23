@@ -2,14 +2,13 @@ def isTwoListAreEqual(list1, list2):
     if len(list1) != len(list2):
         return False
 
-
-    num = 0
-    while num < len(list1):
-        number1 = list1[num]
-        number2 = list2[num]
+    index = 0
+    while index < len(list1):
+        number1 = list1[index]
+        number2 = list2[index]
         if number1 != number2:
             return False
-        num = num + 1
+        index = index + 1
     return True
 
 
