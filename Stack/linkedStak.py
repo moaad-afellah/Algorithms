@@ -7,44 +7,52 @@ class Node:
 class LinkedStack:
 
     def __init__(self):
-        self.head = []
+        self.head = None
+        self.size = 0
 
     def push(self, dataOfNode):
-        node = Node(dataOfNode, None)
-        if len(self.listOfNode) > 1:
-            node = Node(dataOfNode, node)
-        self.listOfNode.append(node.data)
-        return node
+        self.head = Node(dataOfNode, self.head)
+        self.size +=1
 
 
-    def pop(self, head):
-        current = head
-        current = current.next
-        self.listOfNode.remove(head.data)
+
+    def pop(self):
+        if self.head is None:
+            return None
+        popElement = self.head
+        self.head = self.head.next
+        self.size -= 1
+        return popElement
 
     def peek(self):
-        return self.listOfNode[len(self.listOfNode) - 1]
+        return self.head
 
     def len(self):
-        listOfNode = 0
-        while listOfNode < len(list):
-            listOfNode = listOfNode + 1
-        print("Len of this list is: ", listOfNode)
+        return self.size
 
-    def print(self):
-        print(self.listOfNode)
+    def printMyStack(self):
+        pass
+
+
+
 
 
 
 myStack = LinkedStack()
-myStack.len()
-head = myStack.push(41)
-head = myStack.push(51)
-head = myStack.push(71)
-head = myStack.push(1)
-head = myStack.push(1)
-head = myStack.push(1)
-head = myStack.push(1)
-head = myStack.push(1)
-head = myStack.push(1)
-
+myStack.push(41)
+print(myStack.len())
+myStack.push(51)
+print(myStack.len())
+myStack.pop()
+print(myStack.len())
+myStack.push(71)
+myStack.push(51)
+myStack.pop()
+print(myStack.len())
+myStack.pop()
+myStack.pop()
+myStack.pop()
+print(myStack.len())
+myStack.pop()
+print(myStack.len())
+print(myStack)
