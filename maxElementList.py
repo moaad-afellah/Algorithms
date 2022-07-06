@@ -7,8 +7,6 @@ def maxElementList_moaad(listNumber):
     for currentNumber in listNumber:
         if max < currentNumber:
             max = currentNumber
-        elif max >= currentNumber:
-            max = max
     return max
 
 
